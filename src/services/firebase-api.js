@@ -5,12 +5,12 @@ import { VueFire, VueFireFirestoreOptionsAPI } from 'vuefire'
 
 export const firebaseApp = initializeApp({
   // project configuration
-  apiKey: "AIzaSyAV8jmG0qmFlCO7lYoyaONHR9-Xnf9a1hA",
-  authDomain: "apolotesnet.firebaseapp.com",
-  projectId: "apolotesnet",
-  storageBucket: "apolotesnet.appspot.com",
-  messagingSenderId: "673175469064",
-  appId: "1:673175469064:web:1c9c87db32853b12cfa5bd"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 })
 
 export const db = getFirestore(firebaseApp)
