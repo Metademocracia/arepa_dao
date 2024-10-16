@@ -93,7 +93,7 @@ async function getData() {
 
   listDaos.value = [];
 
-  const queryMeta = `query dao($owner_id: String) {
+  /*const queryMeta = `query dao($owner_id: String) {
     proposaldata(id: "1") {
       proposal_actives
       proposal_total
@@ -111,12 +111,12 @@ async function getData() {
     owner(id: $owner_id) {
       total_mft
     }
-  }`;
+  }`;*/
 
   const variables = { owner_id: accounId.value };
 
   /// dao metademocracia
-  await graphQl.getQuery(queryMeta, variables).then(async response => {
+  /*await graphQl.getQuery(queryMeta, variables).then(async response => {
     const owner = response.data.data?.owner;
 
     if(!owner) return
@@ -144,7 +144,7 @@ async function getData() {
       activeProposals: response.data.data?.proposaldata ? response.data.data?.proposaldata?.proposal_actives : 0,
       totalProposals: response.data.data?.proposaldata ? response.data.data?.proposaldata?.proposal_total : 0,
     })
-  })
+  })*/
 
 
   if(likeWalletDao.value) {

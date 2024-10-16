@@ -152,7 +152,7 @@ async function getData() {
     }
   }`;
 
-  const queryMeta = `query dao {
+  /*const queryMeta = `query dao {
     proposaldata(id: "1") {
       proposal_actives
       proposal_total
@@ -166,11 +166,11 @@ async function getData() {
     serie(id: "1") {
       supply
     }
-  }`;
+  }`;*/
 
   /// dao metademocracia
   // if("Metademocracia".toUpperCase().includes(!_likeWalletDao ? "Metademocracia".toUpperCase() : _likeWalletDao.toUpperCase())) {
-    await graphQl.getQuery(queryMeta).then(async response => {
+    /*await graphQl.getQuery(queryMeta).then(async response => {
       let total_balance = 0;
       const delegation_near = response.data.data?.delegations ? response.data.data?.delegations?.find(item => item.id == "NEAR")?.total_amount / 1000000000000000000000000 : 0;
       const delegation_usdt = response.data.data?.delegations ? response.data.data?.delegations?.find(item => item.id == "USDT")?.total_amount / 1000000 : 0;
@@ -193,7 +193,7 @@ async function getData() {
         activeProposals: response.data.data?.proposaldata ? response.data.data?.proposaldata?.proposal_actives : 0,
         totalProposals: response.data.data?.proposaldata ? response.data.data?.proposaldata?.proposal_total : 0,
       })
-    })
+    })*/
   //}
 
 
