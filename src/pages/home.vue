@@ -205,7 +205,6 @@ async function getData() {
 
   //// daos factory
   await graphQl.getQueryDaoV2(query).then(async response => {
-    console.log("response", response)
     const data = response.data.data.daos
     for(let i = 0; i < data.length; i++) {
       /* const responseNearAmount = await WalletP2p.view({
