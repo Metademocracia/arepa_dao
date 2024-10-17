@@ -32,8 +32,11 @@
         </v-btn>
       </toolbar>
 
-      <div class="mt-10" style="color: white !important;" v-if="loading"><center>Cargando daos...</center><br/><v-progress-linear  indeterminate class="full-width" fluid></v-progress-linear></div>
-      <v-divider v-if="!loading" thickness="1.5" color="#fff" class="my-8" style="opacity: .5 !important;" />
+      <div class="mt-10" style="color: white !important;" v-if="loading"><center>Cargando daos...</center><br/><v-progress-linear  indeterminate class="w-100" fluid></v-progress-linear></div>
+
+      <div class="mt-10" style="color: white !important;" v-if="noData"><center>No hay daos disponibles...</center><br/></div>
+
+      <v-divider v-if="!loading && !noData" thickness="1.5" color="#fff" class="my-8" style="opacity: .5 !important;" />
 
       <section id="my-daos__content" class="mt-10">
         <div class="daos">
@@ -75,7 +78,8 @@ daos = ref([]),
 paginatedDaos = computed(() => (daos.value.length || 3) / 3),
 listDaos = ref([]),
 likeWalletDao = ref(undefined),
-accounId = ref(null) // WalletP2p.getA ccount()?.address
+accounId = ref(null), // WalletP2p.getA ccount()?.address
+noData = ref(false);
 const loading = ref(true);
 
 
@@ -235,8 +239,9 @@ async function getData() {
 
   daos.value = listDaos.value;
 
-  if(daos.value.length > 0) {
-    loading.value = false;
+  loading.value = false;
+  if(daos.value.length <= 0) {
+    noData.value = true;
   }
 
   const data = daos.value
