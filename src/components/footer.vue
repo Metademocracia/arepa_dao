@@ -21,7 +21,7 @@
       </div>
 
       <div class="divrow center divcol-mobile" style="gap: 15px;">
-        <a v-for="(item,index) in dataFooter" 
+        <a v-for="(item,index) in dataFooter"
         :href="item.ref" target="_blank" :key="index" style="color: #fff; font-weight: 700; cursor: pointer;"
         @click="$router.push(item.link)"
         >{{ item.name }}</a>
@@ -71,7 +71,7 @@ export default {
 @use '@/assets/styles/main.scss' as *;
 
 #footer {
-  background: #552d7b;
+  background: #552d7b;// #552d7b;
   display: flex;
   flex-direction: column;
   justify-content: center;
