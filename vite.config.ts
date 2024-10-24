@@ -24,7 +24,7 @@ export default defineConfig((userConfig) => {
       // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
       vuetify({
         autoImport: true,
-        styles: { configFile: 'src/assets/styles/settings.scss' }
+        // styles: { configFile: 'src/assets/styles/settings.scss' }
       }),
     ],
     define: {
