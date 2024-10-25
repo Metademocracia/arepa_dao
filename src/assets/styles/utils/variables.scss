@@ -3,7 +3,7 @@
 //========== Variables ==========//
 :root {
   //------- fonts -------//
-  --font-1: 'Galano Grotesque', sans-serif;
+  --font-1: 'Montserrat', sans-serif;
   //------- sizes -------//
   --resizer: clamp(12px, 1vw, 16px);
   --resizer-mobile: clamp(10px, 1.5vw, 12px);
@@ -22,7 +22,7 @@
 
 
 //========== Colors ==========//
-$bg-app:            linear-gradient(45deg, #8A5FA4 30%, #62C3D7 80%);
+$bg-app:            linear-gradient(45deg, #F6F5F5 30%, #F6F5F5 80%);
 $primary:           rgb(var(--v-theme-primary));
 $secondary:         rgb(var(--v-theme-secondary));
 $tertiary:          rgb(var(--v-theme-tertiary));
@@ -36,7 +36,7 @@ $label:             rgb(var(--v-theme-label));
 $text-grey:         rgb(var(--v-theme-text-grey));
 $line:              rgba(var(--v-theme-foreground), .6);
 
-$btn:           #EAE823;
+$btn:           #ED6D05;
 // $btn-pressed:   #AD0FD5;
 // $btn-inactive:  #AD0FD5;
 $text-btn:      #000000;

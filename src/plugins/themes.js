@@ -14,19 +14,19 @@ const defaultColors = {
 const light = {
   dark: false,
   colors: {
-    'background-app': 'linear-gradient(45deg, #DA157C, #62C3D7)',
+    'background-app': 'linear-gradient(45deg, #F6F5F5, #F6F5F5)',
     background: '#FFFFFF',
     surface: '#FFFFFF',
     foreground: '#000000',
     label: '#6e6e6e',
 
-    primary: '#DB107C', // '#DB107C',
-    'primary-darken-1': '#3700B3',
-    secondary: '#02a6d0', // '#02a6d0',
-    'secondary-darken-1': '#018786', // '#018786',
-    tertiary: '8A5FA4', // '#8A5FA4',
-    'tertiary-variant': '48266e', // '#48266e',
-    accent: '#162c59', // '#162c59',
+    primary: '#ED6D05', // '#DB107C',
+    'primary-darken-1': '#ED6D05',
+    secondary: '#DEE6EA', // '#02a6d0',
+    'secondary-darken-1': '#DEE6EA', // '#018786',
+    tertiary: 'ED6D05', // '#8A5FA4',
+    'tertiary-variant': 'ED6D05', // '#48266e',
+    accent: '#b07200', // '#162c59',
 
     ...defaultColors,
   },
