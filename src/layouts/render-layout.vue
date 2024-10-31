@@ -493,7 +493,7 @@ export default {
 }
 .dialog-dao{
   .v-card{
-    background-image: linear-gradient(45deg, #7b48ad 30%, #5577c1 80%);
+    background-image: linear-gradient(45deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-accent)) 80%);
 
     .v-card-title{
       color: #fff;

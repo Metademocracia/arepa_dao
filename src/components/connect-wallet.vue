@@ -43,7 +43,7 @@
         <div class="div-card">
           <v-icon @click="dialogConnect = false, obtenWallet = false" style="cursor: pointer;position: absolute; top: 10px; right: 10px;">mdi-close</v-icon>
 
-          <h5>Cerrar sessión</h5>
+          <h5>Cerrar sesión</h5>
 
           <!--<div class="divrow center wrap mt-8 mb-8" style="gap: 15px;">
             <v-sheet class="sheet-dialog" @click="login('near')">

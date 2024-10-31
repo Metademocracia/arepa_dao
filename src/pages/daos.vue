@@ -29,7 +29,7 @@
 
       <toolbar title="DAOs" content-class="flex-spaceb">
         <v-tabs v-model="tab" slider-color="transparent">
-          <v-tab v-for="(item, i) in tabs" :key="i">
+          <v-tab v-for="(item, i) in tabs" :key="i" class="text-black">
             <div class="custom-checkbox mr-2" :class="{ active: tab == i }" />
             {{ item }}
           </v-tab>

@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32.371" height="30.646" viewBox="0 0 32.371 30.646">
   <g id="Grupo_8940" data-name="Grupo 8940" transform="translate(-169.999)">
     <g id="Componente_72_2" data-name="Componente 72 – 2" transform="translate(169.999)">
-      <rect id="Rectángulo_3033" data-name="Rectángulo 3033" width="13" height="13" rx="1" fill="#fff"/>
-      <rect id="Rectángulo_3036" data-name="Rectángulo 3036" width="13" height="13" rx="1" transform="translate(0 17)" fill="#fff"/>
-      <rect id="Rectángulo_3034" data-name="Rectángulo 3034" width="13" height="13" rx="1" transform="translate(17)" fill="#fff"/>
-      <rect id="Rectángulo_3035" data-name="Rectángulo 3035" width="13" height="13" rx="1" transform="translate(17 17)" fill="#fff"/>
+      <rect id="Rectángulo_3033" data-name="Rectángulo 3033" width="13" height="13" rx="1" fill="#000"/>
+      <rect id="Rectángulo_3036" data-name="Rectángulo 3036" width="13" height="13" rx="1" transform="translate(0 17)" fill="#000"/>
+      <rect id="Rectángulo_3034" data-name="Rectángulo 3034" width="13" height="13" rx="1" transform="translate(17)" fill="#000"/>
+      <rect id="Rectángulo_3035" data-name="Rectángulo 3035" width="13" height="13" rx="1" transform="translate(17 17)" fill="#000"/>
     </g>
     <g id="Componente_72_3" data-name="Componente 72 – 3" transform="translate(172.37 0.646)">
-      <rect id="Rectángulo_3033-2" data-name="Rectángulo 3033" width="13" height="13" rx="1" fill="#fff"/>
-      <rect id="Rectángulo_3036-2" data-name="Rectángulo 3036" width="13" height="13" rx="1" transform="translate(0 17)" fill="#fff"/>
-      <rect id="Rectángulo_3034-2" data-name="Rectángulo 3034" width="13" height="13" rx="1" transform="translate(17)" fill="#fff"/>
-      <rect id="Rectángulo_3035-2" data-name="Rectángulo 3035" width="13" height="13" rx="1" transform="translate(17 17)" fill="#fff"/>
+      <rect id="Rectángulo_3033-2" data-name="Rectángulo 3033" width="13" height="13" rx="1" fill="#000"/>
+      <rect id="Rectángulo_3036-2" data-name="Rectángulo 3036" width="13" height="13" rx="1" transform="translate(0 17)" fill="#000"/>
+      <rect id="Rectángulo_3034-2" data-name="Rectángulo 3034" width="13" height="13" rx="1" transform="translate(17)" fill="#000"/>
+      <rect id="Rectángulo_3035-2" data-name="Rectángulo 3035" width="13" height="13" rx="1" transform="translate(17 17)" fill="#000"/>
     </g>
   </g>
 </svg>

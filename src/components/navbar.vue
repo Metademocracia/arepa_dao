@@ -73,7 +73,7 @@
     </div>
 
     <div class="absolute-img">
-      <img src="@/assets/sources/logos/white-logo.svg" alt="Logo" @click="$router.push('/')" style="cursor: pointer;">
+      <img src="@/assets/sources/logos/black-logo.svg" alt="Logo" @click="$router.push('/')" style="cursor: pointer; width: 120px;">
     </div>
 
 
@@ -81,7 +81,7 @@
       <a
         class="text-a-menu"
         @click="$router.push('/'), menuToggle = false"
-        style="color: #fff; cursor: pointer; font-weight: 700!important;"
+        style="cursor: pointer; font-weight: 700!important;"
         >
         <v-icon color="white mr-1">mdi-home-outline</v-icon> Home
       </a>
@@ -403,6 +403,11 @@ async function logout() {
   padding-block: 20px;
   position: relative;
 
+  a {
+    color: #000 !important;
+    * { color: #000 !important; }
+  }
+
   .absolute-img{
     position: absolute;
   }
@@ -439,7 +444,7 @@ async function logout() {
   span{
     font-weight: 700;
     font-size: 15px;
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -452,7 +457,7 @@ async function logout() {
 }
 
 .card-menu{
-  background-image: linear-gradient(145deg, #DA157C, #62C3D7)!important;
+  background-image: linear-gradient(145deg, rgb(var(--v-theme-primary)), rgb(var(--v-theme-accent)))!important;
   padding: 15px 10px!important;
   border-radius: 12px!important;
   box-shadow: inset 0 3 6 #231f204d;
@@ -470,7 +475,7 @@ async function logout() {
 
 .dialog-dao{
   .v-card{
-    background-image: linear-gradient(45deg, #7b48ad 30%, #5577c1 80%);
+    background-image: linear-gradient(45deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-accent)) 80%);
 
     .v-card-title{
       color: #fff;
@@ -483,7 +488,7 @@ async function logout() {
 }
 
 .v-alert{
-  background: linear-gradient(45deg, #7b48ad 30%, #5577c1 60%)!important;
+  background: linear-gradient(45deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-accent)) 60%)!important;
   width: 40%;
   margin-inline: auto;
   @include media(max, 900px){
@@ -508,7 +513,7 @@ async function logout() {
     .card-dialog{
       padding: 25px;
       padding-block: 20px!important;
-      background-image: linear-gradient(135deg, #8A5FA4 30%, #62C3D7 80%)!important;
+      background-image: linear-gradient(135deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-secondary)) 80%)!important;
       width: 60%;
 
       @include media(max, 1400px){
@@ -516,14 +521,13 @@ async function logout() {
       }
 
       .div-card{
-        background-image: linear-gradient(45deg, #8a347d 30%, #4f80ac 80%)!important;
+        background-image: linear-gradient(45deg, rgb(var(--v-theme-accent)) 30%, rgba(var(--v-theme-accent), .7) 80%)!important;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         padding: 20px;
         padding-block: 30px;
-        color: #fff;
         border-radius: 10px;
         position: relative;
         max-height: 80%;
@@ -542,7 +546,6 @@ async function logout() {
           position: relative;
 
           span{
-            color: #fff;
             font-size: 14px;
           }
 
@@ -551,7 +554,7 @@ async function logout() {
             position: absolute;
             top: 5px;
             right: 5px;
-            color: #61C2D5;
+            color: rgb(var(--v-theme-accent));
             font-size: 20px;
           }
         }
@@ -566,16 +569,19 @@ async function logout() {
   max-width: 100%;
   padding-inline: 30px;
   padding-block: 30px;
-  background-image: linear-gradient(45deg, #8A5FA4 30%, #62C3D7 80%);
+  background-image: linear-gradient(45deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-accent)) 80%);
   top: 0!important;
   left: 0;
   z-index: 100;
 
+  * {
+      color: #fff !important;
+    }
   .text-a-menu{
     --fs: 20px!important;
     --fw: 700;
     font-weight: 700!important;
-    color: #fff;
+    color: #fff !important;
   }
 }
 </style>

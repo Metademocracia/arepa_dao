@@ -61,6 +61,9 @@ export default createVuetify({
     },
     VOtpInput: {
       class: 'padless-inside'
-    }
+    },
+    VPagination: {
+      class: 'bg-primary text-white'
+    },
   }
 })

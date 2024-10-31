@@ -29,7 +29,7 @@
         class="d-flex flex-center flex-grow-1"
         :class="{ active: i === windowStep }"
         height="80"
-        color="#7758a4"
+        color="rgb(var(--v-theme-primary))"
         elevation="3"
         style="max-width: 250px;"
         @click="() => { tokenCardsSelected = item.currency; windowStep = i;}"
