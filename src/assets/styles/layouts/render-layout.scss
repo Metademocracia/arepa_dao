@@ -88,7 +88,7 @@
       justify-content: center;
 
       .v-slide-group {
-        background: rgba(111, 91, 165, .6);
+        background: rgba(var(--v-theme-primary), .6);
         border-radius: 0 0 0 20px !important;
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 
@@ -96,7 +96,7 @@
           border-radius: 0 0 20px 20px !important;
 
           &.active {
-            background: rgb(111, 91, 165) !important;
+            background: rgb(var(--v-theme-primary)) !important;
           }
         }
 

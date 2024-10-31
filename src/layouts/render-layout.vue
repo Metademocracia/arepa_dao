@@ -119,7 +119,7 @@
           content-class="tooltip"
         >
           <template #activator="{ props }">
-            <v-tab v-bind="props" style="background-color: rgba(50, 92, 151, .8);" min-width="75" @click="createProposal()">
+            <v-tab v-bind="props" style="background-color: rgba(var(--v-theme-accent), .8);" min-width="75" @click="createProposal()">
               <img src="@/assets/sources/icons/plus.svg" alt="create proposal" style="width: 20px;">
             </v-tab>
           </template>
