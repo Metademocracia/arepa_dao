@@ -27,7 +27,7 @@
             <v-menu location="bottom">
               <template v-slot:activator="{ props }">
                 <v-btn color="transparent" flat v-bind="props" class="btn-list list-font-btn mt-0">
-                  Organizaciones <v-icon>mdi-chevron-down</v-icon>
+                  Budares <v-icon>mdi-chevron-down</v-icon>
                 </v-btn>
               </template>
 
