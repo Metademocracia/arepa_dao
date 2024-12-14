@@ -374,7 +374,7 @@
             :disabledBtn="loadingBtn"
             :loadingBtn="loadingBtn"
             title="Crear activos DAO"
-            next-text="Crear DAO"
+            next-text="Crear Budare"
             @prev="windowStep--"
             @next="createDao"
           >

@@ -3,15 +3,15 @@
     <section style="margin-inline: calc(50% - 50vw) !important; width: 100vw!important;">
       <v-carousel cycle color="#DB107C" :show-arrows="false">
         <v-carousel-item>
-          <img src="@/assets/sources/images/banner-3.svg" alt="Banner" class="banner-img">
+          <img src="@/assets/sources/images/banner-3.jpg" alt="Banner" class="banner-img">
         </v-carousel-item>
 
         <v-carousel-item>
-          <img src="@/assets/sources/images/banner-2.svg" alt="Banner" class="banner-img">
+          <img src="@/assets/sources/images/banner-2.jpg" alt="Banner" class="banner-img">
         </v-carousel-item>
 
         <v-carousel-item>
-          <img src="@/assets/sources/images/banner-1.svg" alt="Banner" class="banner-img">
+          <img src="@/assets/sources/images/banner-1.jpg" alt="Banner" class="banner-img">
         </v-carousel-item>
       </v-carousel>
     </section>

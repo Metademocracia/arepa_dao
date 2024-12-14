@@ -2,7 +2,7 @@ export const APP_NAMES = {
   camelcase: 'metaDemocracia',
   kedabcase: 'meta-democracia',
   snakecase: 'meta_democracia',
-  capitalize: 'METADEMOCRACIA',
+  capitalize: 'AREPA DIGITAL',
   values: () => Object.values(APP_NAMES),
 }
 

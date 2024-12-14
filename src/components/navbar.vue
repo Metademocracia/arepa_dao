@@ -49,7 +49,7 @@
               {{item.name}}
             </a>
 
-            <v-menu location="bottom">
+            <!-- <v-menu location="bottom">
               <template v-slot:activator="{ props }">
                 <v-btn color="transparent" flat v-bind="props" class="btn-list list-font-btn mt-0">
                   dApps <v-icon>mdi-chevron-down</v-icon>
@@ -59,7 +59,7 @@
               <v-card class="divcol card-menu">
                 <a v-for="(item,index) in dataLinks" :key="index" :href="item.ref" target="blank">{{ item.name }}</a>
               </v-card>
-            </v-menu>
+            </v-menu> -->
           </div>
 
           <!--<v-btn class="btn mt-10" @click="openDialog()">{{ titleBtnLogin }}</v-btn>-->
@@ -125,7 +125,7 @@
         <v-icon color="white mr-1">{{ item.icon }}</v-icon> {{ item.name }}
       </a>
 
-      <v-menu location="bottom">
+      <!-- <v-menu location="bottom">
         <template v-slot:activator="{ props }">
           <v-btn color="transparent" flat v-bind="props" class="btn-list">
             <img
@@ -140,7 +140,7 @@
         <v-card class="divcol card-menu">
           <a v-for="(item,index) in dataLinks" :key="index" :href="item.ref" target="blank">{{ item.name }}</a>
         </v-card>
-      </v-menu>
+      </v-menu> -->
     </div>
 
     <div class="center divrow delete-mobile" style="gap: 10px;">
@@ -223,8 +223,8 @@ const toast = useToast(),
   //  { icon: "mdi-home-variant-outline", name: 'Home', link: '/' },
   //  { icon: 'mdi-file-edit-outline', name: 'Propuestas', link: 'proposals' },
   //  { icon: 'mdi-circle-multiple-outline', name: 'Fondos', link: 'funds' },
-    { icon: 'mdi-account-group-outline', name: 'Foro', ref: 'https://foro.metademocracia.social/'},
-    { icon: 'mdi-information-outline', name: 'Metainfo', ref: 'https://metademocracia.com/' }
+    { icon: 'mdi-account-group-outline', name: 'Foro', ref: 'https://foro.metademocracia.social/'}
+    // { icon: 'mdi-information-outline', name: 'Metainfo', ref: 'https://metademocracia.com/' }
   ],
 
   dataLinks = [
