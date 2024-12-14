@@ -23,7 +23,7 @@
     margin-inline: auto;
 
     .v-slide-group {
-      background: rgba(111, 91, 165, .6);
+      background: rgb(237, 109, 5, .6);
       border-radius: 5px !important;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 
@@ -35,7 +35,7 @@
       .v-btn {
         border-radius: 5px !important;
 
-        &.active { background: rgba(72, 38, 110, 1) !important }
+        &.active { background: rgb(var(--v-theme-primary)) !important }
       }
     }
     /*.v-text-field > .v-text-field__slot input {
@@ -51,7 +51,7 @@
       .v-sheet {
         --br: 5px;
         display: grid;
-        background: rgba(111, 91, 165, .6);
+        background: rgb(237, 109, 5, .6);
         border-radius: var(--br);
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         padding: 6px;

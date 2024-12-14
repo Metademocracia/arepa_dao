@@ -21,7 +21,8 @@ const light = {
     label: '#6e6e6e',
 
     primary: '#ED6D05', // '#DB107C',
-    'primary-darken-1': '#ED6D05',
+    'primary-lighten': '#eb8431',
+    'primary-darken-1': '#d3670e',
     secondary: '#DEE6EA', // '#02a6d0',
     'secondary-darken-1': '#DEE6EA', // '#018786',
     tertiary: 'ED6D05', // '#8A5FA4',
