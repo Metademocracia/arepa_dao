@@ -9,13 +9,14 @@
 
     .members {
       display: flex;
-      flex-direction:row;
+      flex-direction: row;
       gap: 25px;
     }
   }
 
-  input { color: #000 !important }
-  
+  input {
+    color: #000 !important;
+  }
 
   .container-members {
     max-width: 1000px;
@@ -23,9 +24,9 @@
     margin-inline: auto;
 
     .v-slide-group {
-      background: rgb(237, 109, 5, .6);
+      background: rgb(237, 109, 5, 0.6);
       border-radius: 5px !important;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
       &__content {
         display: flex;
@@ -35,13 +36,15 @@
       .v-btn {
         border-radius: 5px !important;
 
-        &.active { background: rgb(var(--v-theme-primary)) !important }
+        &.active {
+          background: rgb(var(--v-theme-primary)) !important;
+        }
       }
     }
     /*.v-text-field > .v-text-field__slot input {
       color: black !important
     }*/
-    
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
@@ -51,9 +54,9 @@
       .v-sheet {
         --br: 5px;
         display: grid;
-        background: rgb(237, 109, 5, .6);
+        background: rgb(237, 109, 5, 0.6);
         border-radius: var(--br);
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         padding: 6px;
 
         .v-card {
@@ -69,19 +72,32 @@
             position: absolute;
             top: 3px;
             right: 3px;
-            .v-icon { font-size: 12px }
+            .v-icon {
+              font-size: 12px;
+            }
           }
 
           .v-img {
-            background-color: rgba(215, 120, 167, 1);
+            background-color: #ed6d05;
             border-radius: 8px;
           }
 
-          span, h6, a { color: #333 !important }
+          span,
+          h6,
+          a {
+            color: #333 !important;
+          }
 
-          a { font-size: 16px; text-decoration: underline; }
-          h6 { font-size: 14px; }
-          span { font-size: 12px; }
+          a {
+            font-size: 16px;
+            text-decoration: underline;
+          }
+          h6 {
+            font-size: 14px;
+          }
+          span {
+            font-size: 12px;
+          }
         }
       }
     }
