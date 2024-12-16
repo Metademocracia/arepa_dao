@@ -20,7 +20,7 @@
           <div class="divcol center mt-8 pt-6" style="gap: 40px;">
             <a
               class="text-a-menu"
-              @click="$router.push('/'), menuToggle = false">
+              href="https://www.arepa.digital/" target="_blank">
               Home
             </a>
 
@@ -33,7 +33,7 @@
 
               <v-card class="divcol card-menu">
                 <a @click="$router.push('/daos')">Todos</a>
-                <a @click="$router.push('/my-daos')">Mis DAOs</a>
+                <a @click="$router.push('/my-daos')">Mis Budares</a>
                 <a class="d-flex" style="white-space: nowrap;" @click="$router.push('/create-dao')">
                   Crear
                   <img class="ml-2" src="@/assets/sources/icons/plus.svg" alt="plus icon">
@@ -80,7 +80,7 @@
     <div class="center divrow delete-mobile" style="gap: 20px; margin-left: 140px">
       <a
         class="text-a-menu"
-        @click="$router.push('/'), menuToggle = false"
+        href="https://www.arepa.digital/" target="_blank"
         style="cursor: pointer; font-weight: 700!important;"
         >
         <v-icon color="white mr-1">mdi-home-outline</v-icon> Home
@@ -107,13 +107,13 @@
               alt="daos icon"
               class="mr-2"
               style="width: 16px;">
-              Organizaciones <v-icon>mdi-chevron-down</v-icon>
+              Budares <v-icon>mdi-chevron-down</v-icon>
           </v-btn>
         </template>
 
         <v-card class="divcol card-menu">
           <a @click="$router.push('/daos')">Todos</a>
-          <a @click="$router.push('/my-daos')">Mis DAOs</a>
+          <a @click="$router.push('/my-daos')">Mis Budares</a>
           <a class="d-flex" style="white-space: nowrap;" @click="$router.push('/create-dao')">
             Crear
             <img class="ml-2" src="@/assets/sources/icons/plus.svg" alt="plus icon">
@@ -223,7 +223,7 @@ const toast = useToast(),
   //  { icon: "mdi-home-variant-outline", name: 'Home', link: '/' },
   //  { icon: 'mdi-file-edit-outline', name: 'Propuestas', link: 'proposals' },
   //  { icon: 'mdi-circle-multiple-outline', name: 'Fondos', link: 'funds' },
-    { icon: 'mdi-account-group-outline', name: 'Foro', ref: 'https://foro.metademocracia.social/'}
+    { icon: 'mdi-account-group-outline', name: 'Foro', ref: 'https://foro.arepa.digital/'}
     // { icon: 'mdi-information-outline', name: 'Metainfo', ref: 'https://metademocracia.com/' }
   ],
 

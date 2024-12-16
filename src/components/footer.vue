@@ -55,7 +55,7 @@ export default {
         },
         {
           name: "Foro",
-          ref: "https://foro.metademocracia.social/"
+          ref: "https://foro.arepa.digital/"
         },
         {
           name: "Metainfo",
