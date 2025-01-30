@@ -29,7 +29,7 @@
 
       <toolbar title="DAOs" content-class="flex-spaceb">
         <v-tabs v-model="tab" slider-color="transparent">
-          <v-tab v-for="(item, i) in tabs" :key="i">
+          <v-tab v-for="(item, i) in tabs" :key="i" class="text-black">
             <div class="custom-checkbox mr-2" :class="{ active: tab == i }" />
             {{ item }}
           </v-tab>
@@ -37,7 +37,7 @@
 
         <v-btn class="bg-tertiary px-2 ml-auto" style="font-size: 12px;" @click="router.push({ name: 'CreateDao' })">
           <v-icon icon="mdi-plus" class="text-white" />
-          Crear Dao
+          Crear Budare
         </v-btn>
       </toolbar>
 

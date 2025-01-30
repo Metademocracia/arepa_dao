@@ -25,10 +25,10 @@
       </div>
     </aside>
 
-      <toolbar title="Mis DAOs" content-class="flex-spaceb">
+      <toolbar title="Mis DAOs" content-class="flex-spaceb custom-toolbar">
         <v-btn class="bg-tertiary px-2 ml-auto" style="font-size: 12px;" @click="router.push({ name: 'CreateDao' })">
           <v-icon icon="mdi-plus" class="text-white" />
-          Crear Dao
+          Crear Budare
         </v-btn>
       </toolbar>
 
@@ -366,6 +366,12 @@ async function getData() {
     }
 
     i { color: $primary }
+  }
+}
+
+.custom-toolbar {
+  h5 {
+    color: #000 !important;
   }
 }
 </style>

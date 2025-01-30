@@ -6,11 +6,12 @@
       @click="emit('pressed')"
     >
       <v-btn
-        icon="mdi-open-in-new"
-        color="rgba(111, 91, 165, 1)"
+        color="rgb(var(--v-theme-primary))"
         size="18"
         class="linked-btn"
-      />
+      >
+        <v-icon icon="mdi-open-in-new" color="white" />
+      </v-btn>
 
       <img :src="dao?.image" :alt="`${dao?.name} image`" class="dao-image mx-auto">
       <v-progress-circular

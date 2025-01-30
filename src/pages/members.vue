@@ -43,7 +43,7 @@
           <v-card class="clear-overlay">
             <v-btn
               icon="mdi-open-in-new"
-              color="rgba(111, 91, 165, 1)"
+              color="rgba(var(--v-theme-primary))"
               size="18"
             />
 

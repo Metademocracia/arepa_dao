@@ -34,9 +34,9 @@
           </v-tab>
         </v-tabs>
 
-        <v-btn class="bg-tertiary px-2 ml-auto" style="font-size: 12px;" @click="router.push({ name: 'CreateDao' })">
+        <v-btn class="bg-tertiary px-2 ml-auto text-white" style="font-size: 12px;" @click="router.push({ name: 'CreateDao' })">
           <v-icon icon="mdi-plus" class="text-white" />
-          Crear Dao
+          Crear Budare
         </v-btn>
       </toolbar>
 

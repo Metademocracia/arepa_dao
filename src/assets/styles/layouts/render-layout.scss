@@ -10,7 +10,7 @@
   padding-top: 30px;
 
   *{
-    color: #fff;
+    color: #000;
     font-family: var(--font1)!important;
   }
 
@@ -88,7 +88,7 @@
       justify-content: center;
 
       .v-slide-group {
-        background: rgba(111, 91, 165, .6);
+        background: rgba(var(--v-theme-primary), .6);
         border-radius: 0 0 0 20px !important;
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 
@@ -96,7 +96,7 @@
           border-radius: 0 0 20px 20px !important;
 
           &.active {
-            background: rgb(111, 91, 165) !important;
+            background: rgb(var(--v-theme-primary)) !important;
           }
         }
 
@@ -175,7 +175,7 @@
     }
 
     .btn-donar{
-      background-color: #61C2D5!important;
+      background-color: rgb(var(--v-theme-primary))!important;
       min-height: 45px!important;
       width: clamp(4em, 8vw, 8.125em);
 

@@ -5,45 +5,295 @@
 //   font-weight: 300;
 //   font-style: normal;
 // }
+// @font-face {
+//   font-family: 'Ubuntu';
+//   src: url(/fonts/Ubuntu/Ubuntu-LightItalic.ttf) format('truetype');
+//   font-weight: 300;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: 'Ubuntu';
+//   src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('truetype');
+//   font-weight: 400;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Ubuntu';
+//   src: url(/fonts/Ubuntu/Ubuntu-Italic.ttf) format('truetype');
+//   font-weight: 400;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: 'Ubuntu';
+//   src: url(/fonts/Ubuntu/Ubuntu-Medium.ttf) format('truetype');
+//   font-weight: 500;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Ubuntu';
+//   src: url(/fonts/Ubuntu/Ubuntu-MediumItalic.ttf) format('truetype');
+//   font-weight: 500;
+//   font-style: italic;
+// }
+// @font-face {
+//   font-family: 'Ubuntu';
+//   src: url(/fonts/Ubuntu/Ubuntu-Bold.ttf) format('truetype');
+//   font-weight: 700;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: 'Ubuntu';
+//   src: url(/fonts/Ubuntu/Ubuntu-BoldItalic.ttf) format('truetype');
+//   font-weight: 700;
+//   font-style: italic;
+// }
+
+//======= KronaOne =======//
 @font-face {
-  font-family: 'Ubuntu';
-  src: url(/fonts/Ubuntu/Ubuntu-LightItalic.ttf) format('truetype');
+  font-family: 'KronaOne';
+  src: url(../../../fonts/KronaOne/KronaOne-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+//======= Alata =======//
+@font-face {
+  font-family: 'Alata';
+  src: url(../../../fonts/Alata/Alata-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+//======= Alatsi =======//
+@font-face {
+  font-family: 'Alatsi';
+  src: url(../../../fonts/Alatsi/Alatsi-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+//======= Montserrat =======//
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-Thin.ttf) format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-ThinItalic.ttf) format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-ExtraLight.ttf) format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf) format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-LightItalic.ttf) format('truetype');
   font-weight: 300;
   font-style: italic;
 }
+
 @font-face {
-  font-family: 'Ubuntu';
-  src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-Regular.ttf) format('truetype');
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Ubuntu';
-  src: url(/fonts/Ubuntu/Ubuntu-Italic.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-Italic.ttf) format('truetype');
   font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
-  font-family: 'Ubuntu';
-  src: url(/fonts/Ubuntu/Ubuntu-Medium.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-Medium.ttf) format('truetype');
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Ubuntu';
-  src: url(/fonts/Ubuntu/Ubuntu-MediumItalic.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-MediumItalic.ttf) format('truetype');
   font-weight: 500;
   font-style: italic;
 }
+
 @font-face {
-  font-family: 'Ubuntu';
-  src: url(/fonts/Ubuntu/Ubuntu-Bold.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf) format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-Bold.ttf) format('truetype');
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Ubuntu';
-  src: url(/fonts/Ubuntu/Ubuntu-BoldItalic.ttf) format('truetype');
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-BoldItalic.ttf) format('truetype');
   font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf) format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-Black.ttf) format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../../../fonts/Montserrat/Montserrat-BlackItalic.ttf) format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+//======= Karla =======//
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-ExtraLight.ttf) format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-ExtraLightItalic.ttf) format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-LightItalic.ttf) format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-Regular.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-Italic.ttf) format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-MediumItalic.ttf) format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-SemiBold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-SemiBoldItalic.ttf) format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-Bold.ttf) format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-BoldItalic.ttf) format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-ExtraBold.ttf) format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url(../../../fonts/Karla/Karla-ExtraBoldItalic.ttf) format('truetype');
+  font-weight: 800;
   font-style: italic;
 }

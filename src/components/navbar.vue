@@ -20,20 +20,20 @@
           <div class="divcol center mt-8 pt-6" style="gap: 40px;">
             <a
               class="text-a-menu"
-              @click="$router.push('/'), menuToggle = false">
+              href="https://www.arepa.digital/" target="_blank">
               Home
             </a>
 
             <v-menu location="bottom">
               <template v-slot:activator="{ props }">
                 <v-btn color="transparent" flat v-bind="props" class="btn-list list-font-btn mt-0">
-                  Organizaciones <v-icon>mdi-chevron-down</v-icon>
+                  Budares <v-icon>mdi-chevron-down</v-icon>
                 </v-btn>
               </template>
 
               <v-card class="divcol card-menu">
                 <a @click="$router.push('/daos')">Todos</a>
-                <a @click="$router.push('/my-daos')">Mis DAOs</a>
+                <a @click="$router.push('/my-daos')">Mis Budares</a>
                 <a class="d-flex" style="white-space: nowrap;" @click="$router.push('/create-dao')">
                   Crear
                   <img class="ml-2" src="@/assets/sources/icons/plus.svg" alt="plus icon">
@@ -49,7 +49,7 @@
               {{item.name}}
             </a>
 
-            <v-menu location="bottom">
+            <!-- <v-menu location="bottom">
               <template v-slot:activator="{ props }">
                 <v-btn color="transparent" flat v-bind="props" class="btn-list list-font-btn mt-0">
                   dApps <v-icon>mdi-chevron-down</v-icon>
@@ -59,7 +59,7 @@
               <v-card class="divcol card-menu">
                 <a v-for="(item,index) in dataLinks" :key="index" :href="item.ref" target="blank">{{ item.name }}</a>
               </v-card>
-            </v-menu>
+            </v-menu> -->
           </div>
 
           <!--<v-btn class="btn mt-10" @click="openDialog()">{{ titleBtnLogin }}</v-btn>-->
@@ -73,15 +73,15 @@
     </div>
 
     <div class="absolute-img">
-      <img src="@/assets/sources/logos/white-logo.svg" alt="Logo" @click="$router.push('/')" style="cursor: pointer;">
+      <img src="@/assets/sources/logos/black-logo.svg" alt="Logo" @click="$router.push('/')" style="cursor: pointer; width: 120px;">
     </div>
 
 
     <div class="center divrow delete-mobile" style="gap: 20px; margin-left: 140px">
       <a
         class="text-a-menu"
-        @click="$router.push('/'), menuToggle = false"
-        style="color: #fff; cursor: pointer; font-weight: 700!important;"
+        href="https://www.arepa.digital/" target="_blank"
+        style="cursor: pointer; font-weight: 700!important;"
         >
         <v-icon color="white mr-1">mdi-home-outline</v-icon> Home
       </a>
@@ -107,13 +107,13 @@
               alt="daos icon"
               class="mr-2"
               style="width: 16px;">
-              Organizaciones <v-icon>mdi-chevron-down</v-icon>
+              Budares <v-icon>mdi-chevron-down</v-icon>
           </v-btn>
         </template>
 
         <v-card class="divcol card-menu">
           <a @click="$router.push('/daos')">Todos</a>
-          <a @click="$router.push('/my-daos')">Mis DAOs</a>
+          <a @click="$router.push('/my-daos')">Mis Budares</a>
           <a class="d-flex" style="white-space: nowrap;" @click="$router.push('/create-dao')">
             Crear
             <img class="ml-2" src="@/assets/sources/icons/plus.svg" alt="plus icon">
@@ -125,7 +125,7 @@
         <v-icon color="white mr-1">{{ item.icon }}</v-icon> {{ item.name }}
       </a>
 
-      <v-menu location="bottom">
+      <!-- <v-menu location="bottom">
         <template v-slot:activator="{ props }">
           <v-btn color="transparent" flat v-bind="props" class="btn-list">
             <img
@@ -140,7 +140,7 @@
         <v-card class="divcol card-menu">
           <a v-for="(item,index) in dataLinks" :key="index" :href="item.ref" target="blank">{{ item.name }}</a>
         </v-card>
-      </v-menu>
+      </v-menu> -->
     </div>
 
     <div class="center divrow delete-mobile" style="gap: 10px;">
@@ -223,8 +223,8 @@ const toast = useToast(),
   //  { icon: "mdi-home-variant-outline", name: 'Home', link: '/' },
   //  { icon: 'mdi-file-edit-outline', name: 'Propuestas', link: 'proposals' },
   //  { icon: 'mdi-circle-multiple-outline', name: 'Fondos', link: 'funds' },
-    { icon: 'mdi-account-group-outline', name: 'Foro', ref: 'https://foro.metademocracia.social/'},
-    { icon: 'mdi-information-outline', name: 'Metainfo', ref: 'https://metademocracia.com/' }
+    { icon: 'mdi-account-group-outline', name: 'Foro', ref: 'https://foro.arepa.digital/'}
+    // { icon: 'mdi-information-outline', name: 'Metainfo', ref: 'https://metademocracia.com/' }
   ],
 
   dataLinks = [
@@ -403,6 +403,11 @@ async function logout() {
   padding-block: 20px;
   position: relative;
 
+  a {
+    color: #000 !important;
+    * { color: #000 !important; }
+  }
+
   .absolute-img{
     position: absolute;
   }
@@ -439,7 +444,7 @@ async function logout() {
   span{
     font-weight: 700;
     font-size: 15px;
-    color: #fff;
+    color: #000;
   }
 }
 
@@ -452,7 +457,7 @@ async function logout() {
 }
 
 .card-menu{
-  background-image: linear-gradient(145deg, #DA157C, #62C3D7)!important;
+  background-image: linear-gradient(145deg, rgb(var(--v-theme-primary)), rgb(var(--v-theme-accent)))!important;
   padding: 15px 10px!important;
   border-radius: 12px!important;
   box-shadow: inset 0 3 6 #231f204d;
@@ -470,7 +475,7 @@ async function logout() {
 
 .dialog-dao{
   .v-card{
-    background-image: linear-gradient(45deg, #7b48ad 30%, #5577c1 80%);
+    background-image: linear-gradient(45deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-accent)) 80%);
 
     .v-card-title{
       color: #fff;
@@ -483,7 +488,7 @@ async function logout() {
 }
 
 .v-alert{
-  background: linear-gradient(45deg, #7b48ad 30%, #5577c1 60%)!important;
+  background: linear-gradient(45deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-accent)) 60%)!important;
   width: 40%;
   margin-inline: auto;
   @include media(max, 900px){
@@ -508,7 +513,7 @@ async function logout() {
     .card-dialog{
       padding: 25px;
       padding-block: 20px!important;
-      background-image: linear-gradient(135deg, #8A5FA4 30%, #62C3D7 80%)!important;
+      background-image: linear-gradient(135deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-secondary)) 80%)!important;
       width: 60%;
 
       @include media(max, 1400px){
@@ -516,14 +521,13 @@ async function logout() {
       }
 
       .div-card{
-        background-image: linear-gradient(45deg, #8a347d 30%, #4f80ac 80%)!important;
+        background-image: linear-gradient(45deg, rgb(var(--v-theme-accent)) 30%, rgba(var(--v-theme-accent), .7) 80%)!important;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         padding: 20px;
         padding-block: 30px;
-        color: #fff;
         border-radius: 10px;
         position: relative;
         max-height: 80%;
@@ -542,7 +546,6 @@ async function logout() {
           position: relative;
 
           span{
-            color: #fff;
             font-size: 14px;
           }
 
@@ -551,7 +554,7 @@ async function logout() {
             position: absolute;
             top: 5px;
             right: 5px;
-            color: #61C2D5;
+            color: rgb(var(--v-theme-accent));
             font-size: 20px;
           }
         }
@@ -566,16 +569,19 @@ async function logout() {
   max-width: 100%;
   padding-inline: 30px;
   padding-block: 30px;
-  background-image: linear-gradient(45deg, #8A5FA4 30%, #62C3D7 80%);
+  background-image: linear-gradient(45deg, rgb(var(--v-theme-primary)) 30%, rgb(var(--v-theme-accent)) 80%);
   top: 0!important;
   left: 0;
   z-index: 100;
 
+  * {
+      color: #fff !important;
+    }
   .text-a-menu{
     --fs: 20px!important;
     --fw: 700;
     font-weight: 700!important;
-    color: #fff;
+    color: #fff !important;
   }
 }
 </style>

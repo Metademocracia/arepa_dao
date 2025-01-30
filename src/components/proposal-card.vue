@@ -598,8 +598,7 @@ async function downvote(id, contractId, type) {
   align-items: center;
   justify-content: space-between;
   padding-inline: 20px;
-
   border-radius: calc(var(--br) - 2px) !important;
-  background-color: #8A5FA4;
+  background-color: #ED6D05;
 }
 </style>

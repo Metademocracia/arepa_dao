@@ -50,6 +50,18 @@
 //---------------------------------------------------------------------------------------------//
 //?========== direct settings ==========//
 //---------------------------------------------------------------------------------------------//
+.text-white, .text-white * {
+  color: rgb(var(--v-theme-white)) !important;
+}
+
+.text-black, .text-black * {
+  color: rgb(var(--v-theme-black)) !important;
+}
+
+.v-progress-linear * {
+  color: rgb(var(--v-theme-primary)) !important;
+}
+
 .v-otp-input {
   .v-field--focused .v-field__outline * {
     border-color: vars.$primary;

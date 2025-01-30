@@ -365,7 +365,7 @@
             <span style="color: #333 !important;">Documento Legal</span>
 
           <sup class="ml-1">
-            <v-btn icon color="rgba(111, 91, 165, 1)" size="15" >
+            <v-btn icon color="rgba(var(--v-theme-primary))" size="15" >
               <v-icon icon="mdi-open-in-new" size="10" />
             </v-btn>
           </sup>

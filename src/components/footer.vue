@@ -55,7 +55,7 @@ export default {
         },
         {
           name: "Foro",
-          ref: "https://foro.metademocracia.social/"
+          ref: "https://foro.arepa.digital/"
         },
         {
           name: "Metainfo",
@@ -71,7 +71,7 @@ export default {
 @use '@/assets/styles/main.scss' as *;
 
 #footer {
-  background: #552d7b;// #552d7b;
+  background: #ED6D05;// #ED6D05;
   display: flex;
   flex-direction: column;
   justify-content: center;

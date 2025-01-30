@@ -166,7 +166,7 @@
 
 
 .custom-tooltip{
-  background-color: #5577c1!important;
+  background-color: rgb(var(--v-theme-accent))!important;
   height: max-content;
   max-width: 150px!important;
 }
@@ -178,5 +178,5 @@
   right: 5px;
   border-width: 10px 10px 0;
   border-style: solid;
-  border-color: #5577c1 transparent transparent;
+  border-color: rgb(var(--v-theme-accent)) transparent transparent;
 }

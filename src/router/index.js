@@ -125,7 +125,7 @@ const routes = [
         path: 'create-dao',
         name: 'CreateDao',
         component: () => import('@/pages/create-dao.vue'),
-        meta: { head: `Crear DAO - ${DEFAULT_TITLE}` }
+        meta: { head: `Crear Budare - ${DEFAULT_TITLE}` }
       },
     ],
   },
