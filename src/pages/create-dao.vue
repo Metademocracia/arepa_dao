@@ -814,7 +814,7 @@ async function createDao(formValid) {
         },
       })),
     },
-    gas: "150000000000000",
+    gas: "300000000000000",
     attachedDeposit: contractCost.value, //"10000000000000000000000000",
   };
 
