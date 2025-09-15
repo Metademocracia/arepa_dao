@@ -47,4 +47,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/walletarepa-front:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/dao-arepa-front:latest
