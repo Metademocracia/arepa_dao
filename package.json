@@ -56,5 +56,6 @@
     "sass-loader": "^13.3.2",
     "vite": "^4.2.0",
     "vite-plugin-vuetify": "^1.0.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

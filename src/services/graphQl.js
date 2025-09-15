@@ -53,6 +53,7 @@ function getQueryDaoV2(query, variables) {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
+        'Authorization': 'Bearer 5bbe3f24e298a1443a7876d8269a6504',
       },
     });
 }

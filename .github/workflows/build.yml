@@ -1,72 +1,50 @@
-name: Build Docker Container & Push to DO Registry
+name: Build and Push Docker Image
 
 on:
-  workflow_call:
-  workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main  # Change this to your default branch if it's not 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      CLUSTER_NAME: k8s-1-28-2-do-0-fra1-1701125677266
+
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Insall doctl
-        uses: digitalocean/action-doctl@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
         with:
-          token: ${{ secrets.DO_API_TOKEN_KEY }}
-      - name: Login to DO Container Registry with short-lived creds
-        run: doctl registry login --expiry-seconds 1200
-      - name: Build container image
-        working-directory: .
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Create .env file
         run: |
-          docker build -f Dockerfile \
-          --build-arg URL_BACKEND=${{ secrets.URL_BACKEND }} \
-          --build-arg VITE_BASE_URL=${{ secrets.VITE_BASE_URL}} \
-          --build-arg VITE_NETWORK=${{ secrets.VITE_NETWORK}} \
-          --build-arg VITE_CONTRACT_DAO=${{ secrets.VITE_CONTRACT_DAO}} \
-          --build-arg VITE_CONTRACT_USDT=${{ secrets.VITE_CONTRACT_USDT}} \
-          --build-arg VITE_ROUTER_WALLET=${{ secrets.VITE_ROUTER_WALLET}} \
-          --build-arg VITE_ROUTER_EXPLORER_NEAR_HASH=${{ secrets.VITE_ROUTER_EXPLORER_NEAR_HASH}} \
-          --build-arg VITE_URL_APIP_PRICE=${{ secrets.VITE_URL_APIP_PRICE}} \
-          --build-arg VITE_ROUTER_RPC=${{ secrets.VITE_ROUTER_RPC}} \
-          --build-arg VITE_ROUTER_GRAPH=${{ secrets.VITE_ROUTER_GRAPH}} \
-          -t registry.digitalocean.com/metademocracia/front-dao:latest \
-          -t registry.digitalocean.com/metademocracia/front-dao:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
-            .
-      - name: Push image
-        run: |
-          docker push registry.digitalocean.com/metademocracia/front-dao --all-tags
-      - name: K8s cluster kubeconfig file with/ short-lived creds
-        run: |
-          doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ env.CLUSTER_NAME }}
-      - name: Verificar existencia del secreto
-        run: |
-          if kubectl get secret front-dao-prod-env &> /dev/null; then
-              kubectl delete secret front-dao-prod-env
-          else
-              echo "El secreto front-dao-prod-env no existe, no es necesario eliminarlo."
-          fi
-      - name: Update deployment secrets
-        run: |
-          cat << EOF >> .env.prod
-          VITE_BASE_URL=${{secrets.VITE_BASE_URL}}
-          VITE_NETWORK=${{secrets.VITE_NETWORK}}
-          VITE_CONTRACT_DAO=${{secrets.VITE_CONTRACT_DAO}}
-          VITE_CONTRACT_USDT=${{secrets.VITE_CONTRACT_USDT}}
-          VITE_ROUTER_WALLET=${{secrets.VITE_ROUTER_WALLET}}
-          VITE_ROUTER_EXPLORER_NEAR_HASH=${{secrets.VITE_ROUTER_EXPLORER_NEAR_HASH}}
-          VITE_URL_APIP_PRICE=${{secrets.VITE_URL_APIP_PRICE}}
-          VITE_ROUTER_RPC=${{secrets.VITE_ROUTER_RPC}}
-          VITE_ROUTER_GRAPH=${{secrets.VITE_ROUTER_GRAPH}}
-          EOF
-          kubectl create secret generic front-dao-prod-env --from-env-file=.env.prod
-      - name: Update Deployment image
-        run: |
-          kubectl set image deployment/front-dao-deployment front-dao=registry.digitalocean.com/metademocracia/front-dao:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5}
-      - name: Wait for rollout to finish
-        run: |
-          kubectl rollout status deployment/front-dao-deployment
+          echo "DOMAIN_WEB=${{ secrets.DOMAIN_WEB }}" > .env
+          echo "VITE_NETWORK=${{ secrets.VITE_NETWORK }}" >> .env
+          echo "VITE_CONTRACT_DAO=${{ secrets.VITE_CONTRACT_DAO }}" >> .env
+          echo "VITE_CONTRACT_USDT=${{ secrets.VITE_CONTRACT_USDT }}" >> .env
+          echo "VITE_CONTRACT_FACTORY=${{ secrets.VITE_CONTRACT_FACTORY }}" >> .env
+          echo "VITE_ROUTER_GRAPH_DAOS=${{ secrets.VITE_ROUTER_GRAPH_DAOS }}" >> .env
+          echo "VITE_ROUTER_WALLET=${{ secrets.VITE_ROUTER_WALLET }}" >> .env
+          echo "VITE_ROUTER_EXPLORER_NEAR_HASH=${{ secrets.VITE_ROUTER_EXPLORER_NEAR_HASH }}" >> .env
+          echo "VITE_URL_APIP_PRICE=${{ secrets.VITE_URL_APIP_PRICE }}" >> .env
+          echo "VITE_ROUTER_GRAPH=${{ secrets.VITE_ROUTER_GRAPH }}" >> .env
+          echo "NODE_ENV=${{ secrets.NODE_ENV }}" >> .env
+          echo "VITE_KEY_IPFS=${{ secrets.VITE_KEY_IPFS }}" >> .env
+          echo "VITE_ROUTER_API_METADEMOCRACIA=${{ secrets.VITE_ROUTER_API_METADEMOCRACIA }}" >> .env
+          echo "VITE_CONTRACT_ARP=${{ secrets.VITE_CONTRACT_ARP }}" >> .env
+          echo "VITE_CONTRACT_WBTC=${{ secrets.VITE_CONTRACT_WBTC }}" >> .env
+          echo "VUE_API_KEY_PIKESPEAK=${{ secrets.VUE_API_KEY_PIKESPEAK }}" >> .env
+          echo "VITE_ROUTER_API_UPLOAD_IMG=${{ secrets.VITE_ROUTER_API_UPLOAD_IMG }}" >> .env
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/walletarepa-front:latest

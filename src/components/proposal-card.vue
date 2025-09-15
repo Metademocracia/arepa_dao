@@ -388,7 +388,7 @@ async function finalize(id, contractId, type) {
 
   if(!id && !contractId) return
 
-  const gas = type == "Transfer" ? "150000000000000" : undefined;
+  const gas = type == "Transfer" ? "300000000000000" : "300000000000000";
   let json = {
     contractId: contractId,
     methodName: "act_proposal",
@@ -432,7 +432,7 @@ async function upvote(id, contractId, type) {
 
   if(!id && !contractId) return
 
-  const gas = type == "Transfer" ? "50000000000000" : undefined;
+  const gas = type == "Transfer" ? "300000000000000" : "300000000000000";
   let json = {
     contractId: contractId,
     methodName: "act_proposal",
@@ -477,7 +477,7 @@ async function downvote(id, contractId, type) {
 
   if(!id && !contractId) return
 
-  const gas = type == "Transfer" ? "150000000000000" : undefined;
+  const gas = type == "Transfer" ? "300000000000000" : "300000000000000";
   let json = {
     contractId: contractId,
     methodName: "act_proposal",

@@ -1,38 +1,38 @@
-FROM node:16 as build-stage
+# Stage 1: Build the static site
+# Use a Node.js image to build the Nuxt.js application.
+FROM node:23-alpine AS build
+
+# Set the working directory
 WORKDIR /app
+
+# Copy package.json and package-lock.json to leverage Docker cache
 COPY package*.json ./
-RUN npm install
+
+# Install dependencies using npm ci for faster, more reliable builds
+RUN npm ci --legacy-peer-deps
+
+# Copy the rest of the application source code
 COPY . .
 
-
-ARG BASE_URL
-ARG VITE_BASE_URL
-ARG VITE_NETWORK
-ARG VITE_CONTRACT_DAO
-ARG VITE_CONTRACT_USDT
-ARG VITE_ROUTER_WALLET
-ARG VITE_ROUTER_EXPLORER_NEAR_HASH
-ARG VITE_URL_APIP_PRICE
-ARG VITE_ROUTER_RPC
-ARG VITE_ROUTER_GRAPH
+# Build the application for production.
+# Since target is 'static', this will generate the static files in the /dist directory.
+RUN npm run build && npm run generate
 
 
-ENV BASE_URL $BASE_URL
-ENV VITE_BASE_URL $VITE_BASE_URL
-ENV VITE_NETWORK $VITE_NETWORK
-ENV VITE_CONTRACT_DAO $VITE_CONTRACT_DAO
-ENV VITE_CONTRACT_USDT $VITE_CONTRACT_USDT
-ENV VITE_ROUTER_WALLET $VITE_ROUTER_WALLET
-ENV VITE_ROUTER_EXPLORER_NEAR_HASH $VITE_ROUTER_EXPLORER_NEAR_HASH
-ENV VITE_URL_APIP_PRICE $VITE_URL_APIP_PRICE
-ENV VITE_ROUTER_RPC $VITE_ROUTER_RPC
-ENV VITE_ROUTER_GRAPH $VITE_ROUTER_GRAPH
+# Stage 2: Serve the static site with Nginx
+# Use a lightweight Nginx image for the production server.
+FROM nginx:stable-alpine
 
-RUN npm run build
+# Copy the generated static files from the 'build' stage to the Nginx public directory
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# Stage 2: Serve Vue app with Nginx
-FROM nginx:1.25.1 as prod-stage
+# Copy the custom Nginx configuration
+# This file should be configured to handle a Single Page Application (SPA)
+# by redirecting all routes to index.html.
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build-stage /app/dist /usr/share/nginx/html
+
+# Expose port 80 for the Nginx server
 EXPOSE 80
+
+# Start Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
