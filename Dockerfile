@@ -16,7 +16,7 @@ COPY . .
 
 # Build the application for production.
 # Since target is 'static', this will generate the static files in the /dist directory.
-RUN npm run build && npm run generate
+RUN npm run build
 
 
 # Stage 2: Serve the static site with Nginx
