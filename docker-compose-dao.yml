@@ -1,28 +1,28 @@
-version: '3.9'
-
 services:
   dao-arepa-front:
     image: metademocracia1/dao-arepa-front:latest
     container_name: dao-arepa-front
     restart: always
     ports:
-      - "8000:80" # Maps port 80 on the host to port 80 in the container
+      - "8000:80"  # Maps host port 8000 to container port 80
     networks:
       - app-network
-
 
   npm:
     image: jc21/nginx-proxy-manager:latest
     container_name: nginx-proxy-manager
     restart: always
     ports:
-      - "81:81" # NPM admin panel
-      - "443:443"
+      - "80:80"     # HTTP traffic (ADD THIS LINE)
+      - "81:81"     # NPM admin panel
+      - "443:443"   # HTTPS traffic
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
     networks:
       - app-network
+    depends_on:
+      - dao-arepa-front
 
   watchtower:
     image: containrrr/watchtower
