@@ -20,7 +20,7 @@
           <div class="divcol center mt-8 pt-6" style="gap: 40px;">
             <a
               class="text-a-menu"
-              href="https://www.arepa.digital/" target="_blank">
+              href="https://arepa.digital/" target="_blank">
               Home
             </a>
 
@@ -80,7 +80,7 @@
     <div class="center divrow delete-mobile" style="gap: 20px; margin-left: 140px">
       <a
         class="text-a-menu"
-        href="https://www.arepa.digital/" target="_blank"
+        href="https://arepa.digital/" target="_blank"
         style="cursor: pointer; font-weight: 700!important;"
         >
         <v-icon color="white mr-1">mdi-home-outline</v-icon> Home
